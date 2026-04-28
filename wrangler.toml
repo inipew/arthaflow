@@ -1,8 +1,8 @@
 name = "arthaflow"
 compatibility_date = "2024-04-03"
-pages_build_output_dir = ".next"
+pages_build_output_dir = ".vercel/output"
 
 [[d1_databases]]
-binding = "arthaflow_db"
+binding = "DB"
 database_name = "arthaflow-db"
 database_id = "44e8b848-e8b1-48b2-a550-848a2862f47c"
