@@ -8,7 +8,7 @@ export default function DashboardHeader() {
           <Wallet size={20} color="white" />
         </div>
         <h1 style={{ fontSize: '1.5rem', background: 'linear-gradient(to right, #fff, #94a3b8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-          ArthaFlow
+          ArthaFlow v1.0
         </h1>
       </div>
       <p className="text-muted" style={{ fontSize: '0.75rem' }}>Digital Finance Sawah & Gabah</p>
