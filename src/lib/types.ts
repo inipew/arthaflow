@@ -15,17 +15,3 @@ export interface Transaction {
   created_at: string;
   category_name?: string; // Joined field
 }
-
-export type D1Database = {
-  prepare: (sql: string) => any;
-  batch: (statements: any[]) => Promise<any>;
-  exec: (sql: string) => Promise<any>;
-};
-
-declare global {
-  namespace NodeJS {
-    interface ProcessEnv {
-      DB: D1Database;
-    }
-  }
-}

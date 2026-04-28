@@ -2,31 +2,33 @@
   "name": "arthaflow",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint",
-    "pages:build": "npx @opennextjs/cloudflare build",
-    "pages:preview": "npm run pages:build && wrangler pages dev",
-    "pages:deploy": "npm run pages:build && wrangler pages deploy"
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "lint": "eslint .",
+    "pages:deploy": "npm run build && wrangler pages deploy"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250109.0",
+    "@sveltejs/adapter-cloudflare": "^5.0.1",
+    "@sveltejs/kit": "^2.16.0",
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "@types/node": "^22.10.7",
+    "eslint": "^9.18.0",
+    "globals": "^15.14.0",
+    "svelte": "^5.17.3",
+    "svelte-check": "^4.1.4",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.20.0",
+    "vite": "^6.0.7",
+    "wrangler": "^3.101.0"
   },
   "dependencies": {
     "date-fns": "^4.1.0",
-    "esbuild": "^0.28.0",
-    "lucide-react": "^1.11.0",
-    "next": "^15.5.15",
-    "react": "19.0.0",
-    "react-dom": "19.0.0"
-  },
-  "devDependencies": {
-    "@opennextjs/cloudflare": "latest",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.4",
-    "typescript": "^5",
-    "wrangler": "^4.85.0"
+    "lucide-svelte": "latest"
   }
 }
